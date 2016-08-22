@@ -1,0 +1,97 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-family-sans-serif;
+	font-size: $font-size-base;
+}  
+
+.wrapper {
+	margin: 0 auto;
+	padding: 0;
+	width: 960px;
+	background-color: #efefef;
+}
+
+header {
+	background: pink;
+}
+
+footer {
+	margin: $spacing-two 0 0;
+	padding: $spacing-two 0 0;
+	border-top: 4px solid;
+	background-color: wheat;
+}
+
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+
+.theme-links,
+.cookie-message,
+.content-links,
+.content-container {
+	padding: 0 $spacing-two;
+}
+
+.social-links {
+	padding: 0 $spacing-two $spacing-two;
+}
+
+.content-container {
+	margin: $spacing-two 0 0;
+}
+
+.cookie-message {
+	background: skyblue;  
+	float: right;
+}
+
+.cookie-message p {
+	margin: 0;
+}
+
+.cookie-message,
+.nav-themes {
+	padding-top: $spacing-base;
+	padding-bottom: $spacing-base	;
+}
+
+.nav-themes {
+	background: wheat;
+	float: left;
+}
+
+.nav-content {
+	padding: $spacing-two 0;
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 0;
+}
+
+
+/* ===============
+Smaller Devices
+================== */
+
+@media (max-width: $middle-breakpoint) { 
+
+	.wrapper {
+		margin: 0 5%;
+		width: 90%;
+	}
+	
+}
+
+@media (max-width: $mobile-breakpoint) { 
+
+	.cookie-message {
+		display: inline-block;
+		float: none;
+	}
+}

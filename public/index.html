@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>    
+        <meta charset='utf-8'>
+        <title>Angela Cullen | Web Developer</title>  
+        
+        <!-- metadata, social media / OG data, favicons etc to go here -->
+        
+        <link rel='stylesheet' type='text/css' href='css/styles.min.css' />
+        
+</head>  
+<body ng-app='mainApp'>
+	     
+	<div class='wrapper'>
+	
+	<header>
+		<nav class='nav-themes'>
+			<ul class='theme-links'>
+				<li><a href='#'>Theme 1</a></li>
+				<li><a href='#'>Theme 2</a></li>
+				<li><a href='#'>Theme 3</a></li>
+			</ul>
+		</nav>  
+		 
+		<div ng-controller='cookieCtrl' class='cookie-message'><p>This site utilises cookies in order to work correctly. <a ng-click='acknowledgeCookies()' href='#'>That's fine.</a></p></div>
+		
+		<nav class='nav-content'>
+			<ul class='content-links'>
+				<li><a href='#'>Nav Link 1</a></li>
+				<li><a href='#'>Nav Link 2</a></li>
+				<li><a href='#'>Nav Link 3</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<section class='content-container' ng-view>
+	</section> 
+	
+	<footer>
+		<ul class='social-links'>
+			<li>
+				<a href='#'>LinkedIn</a>
+			</li>
+			<li>
+				<a href='#'>Twitter</a>
+			</li>
+			<li>
+				<a href='#'>Bitbucket</a>
+			</li>
+		</ul>
+	</footer>
+	          
+	</div><!-- end of .wrapper -->    
+	
+	<script src='http://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js'></script>
+	<script src='js/controller.js'></script>
+	  
+
+</body>
+</html>
