@@ -44,22 +44,22 @@ app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   //$cookies.put('cookieAcknowledgement', 'Acknowledged');
 }]);
 
-app.controller('MyController1', ['$scope', function(sc) {
-    // ...
-}]);
-
-app.controller('themeCtrl', ['$scope', function(themeScope) {
+app.controller('themeCtrl', ['$scope', function($scope) {
     
     // set default
-    themeScope.css = 'theme1';  
+    $scope.css = 'theme1';  
     
-    console.log('Current theme = ' + themeScope.css);
+    console.log('Current theme = ' + $scope.css);
     
-    themeScope.themes = [
+    $scope.themes = [
         { name: 'theme1', url: 'theme1' } , 
         { name: 'theme2', url: 'theme2' } 
     ];
     
+    $scope.switchTheme = function(themeURL) {
+        console.log('switchTheme says new theme should be = ' + themeURL); 
+        $scope.css = themeURL; 
+    }
 
 }]);
 
