@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
 		// redirect to homepage 
 		redirectTo: '/' 
 	})
-});  
+});    
 
 app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
@@ -25,23 +25,24 @@ app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
   console.log('cookieCtrl says that cookieMessage = ' + cookieMessage);
   
-  if(cookieMessage != 0 && cookieMessage != undefined){
-  	// hide the cookie message markup
-  	console.log('hide cookie message');
-  } else {
-  	// show the cookie message markup
-  	console.log('show cookie message');
-  }
+      $scope.checkCookieMessageVisibility = function() {  
+        if(cookieMessage != 0 && cookieMessage != undefined){
+          	return false; // hide message
+        } else {
+          	return true; // show message
+        }
+    }
+    
+  $scope.checkCookieMessageVisibility();
     
   $scope.acknowledgeCookies = function() {
-  	if(cookieMessage == 0) {
+    if(cookieMessage == 0 || cookieMessage == undefined) {
   		$cookies.put('cookieAcknowledgement', 'Acknowledged', {'path': '/'});
-  	}	
+  		console.log('cookie message should now hide itself at this point.');
+  	}
+  	$scope.checkCookieMessageVisibility();
   }
   
-  // Setting a cookie
-  // if 'that's fine' link is clicked etc ...
-  //$cookies.put('cookieAcknowledgement', 'Acknowledged');
 }]);
 
 app.controller('themeCtrl', ['$scope', function($scope) {
@@ -62,16 +63,18 @@ app.controller('themeCtrl', ['$scope', function($scope) {
   
 /*
 
-FIXME: Angular cookie code for cookie message; fix the undefined cookies error
+FIXME: Cookie code works but you only see the positive view results when you refresh the page. Why is it not dynamically showing/hiding the cookie message?
 
 FIXME: Angular: when you switch the theme CSS over using the buttons, the ng-view content disappears. Not good!
 
-FIXME: Gulpfile (?) : when you try to switch to theme2, it doesn't work, because gulp has compiled a seemingly empty styles.min.css file
+FIXME: Gulpfile seems to have caught up with the themes so now clicking theme2 does load the new theme colours. However, still weird behaviour going on
 
 TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
 TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
+
+TODO: Refactor the config ng-route stuff to be more like the angular-seed example
 
 */ 

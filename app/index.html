@@ -26,9 +26,11 @@
 			<ul class='theme-links'>
 				<li ng-repeat='theme in themes'><a class='icon-cog' href='#' ng-click='switchTheme(theme.url)'>{{ theme.name }}</a></li>  
 			</ul>
-		</nav>  
+		</nav>   
 		 
-		<div ng-controller='cookieCtrl' class='cookie-message'><p>This site utilises cookies in order to work correctly. <a ng-click='acknowledgeCookies()' href='#'>That's fine.</a></p></div>
+		<div ng-show='checkCookieMessageVisibility()' ng-controller='cookieCtrl' class='cookie-message'>
+			<p>This site utilises cookies in order to work correctly. <a ng-click='acknowledgeCookies()' href='#'>That's fine.</a></p>
+		</div>
 		
 		<nav class='nav-content'>
 			<ul class='content-links'>
