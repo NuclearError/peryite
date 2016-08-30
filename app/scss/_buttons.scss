@@ -1,11 +1,65 @@
+.theme-links li {
+	border: 1px solid red;
+}
+
+.theme-links li a {
+	@include border-radius(50%);
+	background-color: blue;
+	width: $spacing-three;
+	height: $spacing-three;
+	text-decoration: none;
+}
+
 .content-links li {
 	margin: 0 $spacing-base;
 	padding: $spacing-base 0;
-	border: 1px solid red;  
+	border: 1px solid red;
+	background-color: #292929;
+	@include transition(background-color .25s ease-in);  
+}
+
+.content-links li:hover,
+.content-links li:focus,
+.content-links li:active {
+	background-color: grey;
+	border: 1px solid blue;
 }
 
 .content-links li a {
 	margin: 0;
 	padding: $spacing-base $spacing-three;
 	font-size: $font-size-base;
+	text-decoration: none;
+	color: grey;
+	@include transition(color .25s ease-in);
+}
+
+.content-links li:hover a,
+.content-links li:focus a,
+.content-links li:active a {
+	color: white;
+}
+
+/* ===============
+Smaller Devices
+================== */  
+
+@media (max-width: $middle-breakpoint) { 
+	
+}
+
+@media (max-width: $mobile-breakpoint) { 
+	
+	.content-links li {
+		margin: $spacing-two 0 0;
+		width: 100%;	
+	}
+	
+	.content-links li:first-child {
+		margin: 0;
+	}
+	
+	.content-links li a {
+		padding: $spacing-base 33.75%;
+	}
 }

@@ -1,4 +1,11 @@
 
 footer ul li a {
-    
+    font-size: 0;
+    text-decoration: none;
+}
+
+footer ul li a:before {
+    font-family: 'peryite';
+    font-size: $font-size-heading;
+    margin-right: $font-size-base;
 }
