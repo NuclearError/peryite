@@ -134,9 +134,11 @@ Font icon stuff
 
 }
 
-.icon-cog:before { content: '\e800'; }
+.icon-cog:before { content: '\e800'; } 
 .icon-twitter:before { content: '\f099'; } 
 .icon-linkedin:before { content: '\f0e1'; } 
+.icon-circle-empty:before { content: '\f10c'; } 
+.icon-circle:before { content: '\f111'; } 
 .icon-github:before { content: '\f113'; } 
 .icon-gamepad:before { content: '\f11b'; } 
 .icon-html5:before { content: '\f13b'; } 
