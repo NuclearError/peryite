@@ -1,27 +1,16 @@
-.theme-links li {
-	border: 1px solid red;
-}
-
-.theme-links li a {
-	@include border-radius(50%);
-	background-color: blue;
-	width: $spacing-three;
-	height: $spacing-three;
-	text-decoration: none;
-}
 
 .content-links li {
 	margin: 0 $spacing-base;
 	padding: $spacing-base 0;
 	border: 1px solid red;
-	background-color: #292929;
+	background-color: $brand-link-color;
 	@include transition(background-color .25s ease-in);  
 }
 
 .content-links li:hover,
 .content-links li:focus,
 .content-links li:active {
-	background-color: grey;
+	background-color: $brand-link-hover;
 	border: 1px solid blue;
 }
 

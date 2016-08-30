@@ -2,10 +2,18 @@
 footer ul li a {
     font-size: 0;
     text-decoration: none;
+    color: $brand-link-color;
+    @include transition(color .25s ease-in);  
 }
 
 footer ul li a:before {
     font-family: 'peryite';
     font-size: $font-size-heading;
     margin-right: $font-size-base;
+}
+
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active {
+	color: $brand-link-hover;
 }

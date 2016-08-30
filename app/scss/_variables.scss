@@ -14,6 +14,9 @@ $spacing-two: 			$spacing-base * 2;
 $spacing-three: 		$spacing-base * 3;
 $spacing-four: 			$spacing-base * 4;
 
+$brand-link-color:  #2a2a2a;
+$brand-link-hover:  #545454;
+
 
 @mixin transition($args...) {
 	-webkit-transition: $args;

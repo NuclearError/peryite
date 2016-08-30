@@ -1,0 +1,14 @@
+
+.theme-links li {
+	border: 1px solid red;
+	width: $spacing-three;
+	height: $spacing-three;
+}
+
+.theme-links li a {
+	@include border-radius(100%);
+	background-color: blue;
+	text-decoration: none;
+	font-size: 0;
+	width: 100%;
+}
