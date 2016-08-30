@@ -49,25 +49,24 @@ app.controller('themeCtrl', ['$scope', function($scope) {
     // set default
     $scope.css = 'theme1';  
     
-    console.log('Current theme = ' + $scope.css);
-    
     $scope.themes = [
         { name: 'theme1', url: 'theme1' } , 
         { name: 'theme2', url: 'theme2' } 
     ];
     
     $scope.switchTheme = function(themeURL) {
-        console.log('switchTheme says new theme should be = ' + themeURL); 
-        $scope.css = themeURL; 
+        $scope.css = themeURL;   
     }
 
 }]);
-
+  
 /*
 
 FIXME: Angular cookie code for cookie message; fix the undefined cookies error
 
-TODO: Angular code for switching CSS theme (colours) - this also will require a cookie
+TODO: Angular: implement cookie that remembers which css theme is in use
+
+TODO: update gulpfile.js to sort out themes css
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 

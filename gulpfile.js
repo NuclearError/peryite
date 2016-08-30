@@ -19,6 +19,13 @@ gulp.task('compileCSS', function() {
         .pipe(gulp.dest('public/css'));
 });
 
+// Compile and minify theme styling
+gulp.task('compileThemes', function() {
+    return sass('app/themes/*/styles.scss', {style: 'compressed'})
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('public/themes'));
+});
+
 // Concatenate and minify JS  
 gulp.task('tidyJS', function() {
     return gulp.src('app/js/*.*')
@@ -57,9 +64,10 @@ gulp.task('copyIndex', function() {
 gulp.task('watchFiles', function() {
   gulp.watch('app/js/*.js', ['tidyJS', 'generateToDoList']);
   gulp.watch('app/scss/*.scss', ['compileCSS']);
+  gulp.watch('app/themes/*.scss', ['compileThemes']);
   gulp.watch('app/img/*.*', ['copyImages']);
   gulp.watch('app/*.html', ['copyIndex']);
 });
 
 // Gulp Tasks
-gulp.task('default', ['tidyJS', 'compileCSS', 'generateToDoList', 'copyImages', 'copyIndex', 'watchFiles']);
+gulp.task('default', ['tidyJS', 'compileCSS', 'compileThemes', 'generateToDoList', 'copyImages', 'copyIndex', 'watchFiles']);
