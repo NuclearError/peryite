@@ -23,7 +23,7 @@ gulp.task('compileCSS', function() {
 gulp.task('compileThemes', function() {
     return sass('app/themes/*/styles.scss', {style: 'compressed'})
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('public/themes'));
+        .pipe(gulp.dest('public/themes')); 
 });
 
 // Concatenate and minify JS  

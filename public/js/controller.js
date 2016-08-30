@@ -66,6 +66,8 @@ FIXME: Angular cookie code for cookie message; fix the undefined cookies error
 
 FIXME: Angular: when you switch the theme CSS over using the buttons, the ng-view content disappears. Not good!
 
+FIXME: Gulpfile (?) : when you try to switch to theme2, it doesn't work, because gulp has compiled a seemingly empty styles.min.css file
+
 TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
