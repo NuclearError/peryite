@@ -64,7 +64,7 @@ gulp.task('copyIndex', function() {
 gulp.task('watchFiles', function() {
   gulp.watch('app/js/*.js', ['tidyJS', 'generateToDoList']);
   gulp.watch('app/scss/*.scss', ['compileCSS']);
-  gulp.watch('app/themes/*.scss', ['compileThemes']);
+  gulp.watch('app/themes/*/*.scss', ['compileThemes']);
   gulp.watch('app/img/*.*', ['copyImages']);
   gulp.watch('app/*.html', ['copyIndex']);
 });

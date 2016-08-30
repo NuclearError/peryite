@@ -64,9 +64,9 @@ app.controller('themeCtrl', ['$scope', function($scope) {
 
 FIXME: Angular cookie code for cookie message; fix the undefined cookies error
 
-TODO: Angular: implement cookie that remembers which css theme is in use
+FIXME: Angular: when you switch the theme CSS over using the buttons, the ng-view content disappears. Not good!
 
-TODO: update gulpfile.js to sort out themes css
+TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
