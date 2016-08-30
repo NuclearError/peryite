@@ -3,7 +3,7 @@ console.log('Hello from controller.js');
 var app = angular.module('mainApp', ['ngRoute', 'ngCookies']);  
 
 // not written for compression
-
+ 
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
@@ -18,15 +18,14 @@ app.config(function($routeProvider) {
 	})
 });  
 
-
-app.controller('cookieCtrl', ['$cookies', function($scope, $cookies) {
+app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
   // Retrieving a cookie
   var cookieMessage = $cookies.get('cookieAcknowledgement');
   
   console.log('cookieCtrl says that cookieMessage = ' + cookieMessage);
   
-  if(cookieMessage != 0){
+  if(cookieMessage != 0 && cookieMessage != undefined){
   	// hide the cookie message markup
   	console.log('hide cookie message');
   } else {
@@ -45,16 +44,23 @@ app.controller('cookieCtrl', ['$cookies', function($scope, $cookies) {
   //$cookies.put('cookieAcknowledgement', 'Acknowledged');
 }]);
 
-app.controller('themeCtrl', [function($scope) {
+app.controller('MyController1', ['$scope', function(sc) {
+    // ...
+}]);
+
+app.controller('themeCtrl', ['$scope', function(themeScope) {
     
     // set default
-    $scope.css = 'theme1';
+    themeScope.css = 'theme1';  
     
-    $scope.themes = [
+    console.log('Current theme = ' + themeScope.css);
+    
+    themeScope.themes = [
         { name: 'theme1', url: 'theme1' } , 
         { name: 'theme2', url: 'theme2' } 
     ];
     
+
 }]);
 
 /*

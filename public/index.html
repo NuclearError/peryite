@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app='mainApp' ng-controller="themeCtrl">
 <head>    
         <meta charset='utf-8'>
         <title>Angela Cullen | Web Developer</title>  
@@ -8,17 +8,23 @@
         
         <link rel='stylesheet' type='text/css' href='css/styles.min.css' />
         
+        <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
+		<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js'></script>
+		
+		<link rel='stylesheet' type='text/css' ng-href='public/themes/{{ css }}.css' />
+		
+		<script src='js/controller.js'></script>    
+        
 </head>  
-<body ng-app='mainApp'>
+<body>
 	     
 	<div class='wrapper'>
 	
 	<header>
 		<nav class='nav-themes'>
 			<ul class='theme-links'>
-				<li><a class='icon-cog' href='#'>Theme 1</a></li>  
-				<li><a class='icon-cog' href='#'>Theme 2</a></li>
-				<li><a class='icon-cog' href='#'>Theme 3</a></li>
+				<li ng-repeat='theme in themes'><a class='icon-cog' href='#'>{{ theme.name }}</a></li>  
 			</ul>
 		</nav>  
 		 
@@ -57,12 +63,6 @@
 	</footer>
 	          
 	</div><!-- end of .wrapper -->    
-	
-	<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
-	<script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.js'></script>
-	<script src='js/controller.js'></script>
-	  
 
 </body>
 </html>

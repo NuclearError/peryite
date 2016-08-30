@@ -1,6 +1,8 @@
 
 /* Theme #1 */
 
+html, body { background-color: pink; }
+
 a,
 .content-links li a,
 footer ul li a,

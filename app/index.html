@@ -14,7 +14,7 @@
 		
 		<link rel='stylesheet' type='text/css' ng-href='public/themes/{{ css }}.css' />
 		
-		<script src='js/controller.js'></script>  
+		<script src='js/controller.js'></script>    
         
 </head>  
 <body>
@@ -24,9 +24,7 @@
 	<header>
 		<nav class='nav-themes'>
 			<ul class='theme-links'>
-				<li><a class='icon-cog' href='#'>Theme 1</a></li>  
-				<li><a class='icon-cog' href='#'>Theme 2</a></li>
-				<li><a class='icon-cog' href='#'>Theme 3</a></li>
+				<li ng-repeat='theme in themes'><a class='icon-cog' href='#'>{{ theme.name }}</a></li>  
 			</ul>
 		</nav>  
 		 

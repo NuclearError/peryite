@@ -3,7 +3,7 @@ console.log('Hello from controller.js');
 var app = angular.module('mainApp', ['ngRoute', 'ngCookies']);  
 
 // not written for compression
-
+ 
 app.config(function($routeProvider) {
 	$routeProvider
 	.when('/', {
@@ -18,15 +18,14 @@ app.config(function($routeProvider) {
 	})
 });  
 
-
-app.controller('cookieCtrl', ['$cookies', function($scope, $cookies) {
+app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
   // Retrieving a cookie
   var cookieMessage = $cookies.get('cookieAcknowledgement');
   
   console.log('cookieCtrl says that cookieMessage = ' + cookieMessage);
   
-  if(cookieMessage != 0){
+  if(cookieMessage != 0 && cookieMessage != undefined){
   	// hide the cookie message markup
   	console.log('hide cookie message');
   } else {
@@ -45,14 +44,33 @@ app.controller('cookieCtrl', ['$cookies', function($scope, $cookies) {
   //$cookies.put('cookieAcknowledgement', 'Acknowledged');
 }]);
 
+app.controller('MyController1', ['$scope', function(sc) {
+    // ...
+}]);
+
+app.controller('themeCtrl', ['$scope', function(themeScope) {
+    
+    // set default
+    themeScope.css = 'theme1';  
+    
+    console.log('Current theme = ' + themeScope.css);
+    
+    themeScope.themes = [
+        { name: 'theme1', url: 'theme1' } , 
+        { name: 'theme2', url: 'theme2' } 
+    ];
+    
+
+}]);
+
 /*
 
-TODO: implement Angular cookie code for cookie message
+FIXME: Angular cookie code for cookie message; fix the undefined cookies error
 
-TODO: implement Angular code for switching CSS theme (colours) - this also will require a cookie
+TODO: Angular code for switching CSS theme (colours) - this also will require a cookie
 
-TODO: implement basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
+TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
-TODO: figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
+TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
 
 */ 
