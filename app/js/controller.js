@@ -45,14 +45,26 @@ app.controller('cookieCtrl', ['$cookies', function($scope, $cookies) {
   //$cookies.put('cookieAcknowledgement', 'Acknowledged');
 }]);
 
+app.controller('themeCtrl', [function($scope) {
+    
+    // set default
+    $scope.css = 'theme1';
+    
+    $scope.themes = [
+        { name: 'theme1', url: 'theme1' } , 
+        { name: 'theme2', url: 'theme2' } 
+    ];
+    
+}]);
+
 /*
 
-TODO: implement Angular cookie code for cookie message
+FIXME: Angular cookie code for cookie message; fix the undefined cookies error
 
-TODO: implement Angular code for switching CSS theme (colours) - this also will require a cookie
+TODO: Angular code for switching CSS theme (colours) - this also will require a cookie
 
-TODO: implement basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
+TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
-TODO: figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
+TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
 
 */ 
