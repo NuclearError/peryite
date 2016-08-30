@@ -9,18 +9,15 @@ html, body {
 	margin: 0 auto;
 	padding: 0;
 	width: 960px;
-	background-color: #efefef;
 }
 
 header {
-	background: pink;
 }
 
 footer {
 	margin: $spacing-two 0 0;
 	padding: $spacing-two 0 0;
 	border-top: 4px solid;
-	background-color: wheat;
 }
 
 ul, li {
@@ -28,6 +25,16 @@ ul, li {
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+}
+
+a {
+	color: $brand-link-color;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $brand-link-hover;
 }
 
 .theme-links,
@@ -46,7 +53,6 @@ ul, li {
 }
 
 .cookie-message {
-	background: skyblue;  
 	float: right;
 }
 
@@ -57,11 +63,10 @@ ul, li {
 .cookie-message,
 .nav-themes {
 	padding-top: $spacing-base;
-	padding-bottom: $spacing-base	;
+	padding-bottom: $spacing-base;
 }
 
 .nav-themes {
-	background: wheat;
 	float: left;
 }
 

@@ -2,7 +2,6 @@
 .content-links li {
 	margin: 0 $spacing-base;
 	padding: $spacing-base 0;
-	border: 1px solid red;
 	background-color: $brand-link-color;
 	@include transition(background-color .25s ease-in);  
 }
@@ -11,7 +10,6 @@
 .content-links li:focus,
 .content-links li:active {
 	background-color: $brand-link-hover;
-	border: 1px solid blue;
 }
 
 .content-links li a {
@@ -19,7 +17,7 @@
 	padding: $spacing-base $spacing-three;
 	font-size: $font-size-base;
 	text-decoration: none;
-	color: grey;
+	color: lighten($brand-link-hover, 30%);
 	@include transition(color .25s ease-in);
 }
 
