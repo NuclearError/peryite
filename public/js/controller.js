@@ -65,10 +65,6 @@ app.controller('themeCtrl', ['$scope', function($scope) {
 
 FIXME: Cookie code works but you only see the positive view results when you refresh the page. Why is it not dynamically showing/hiding the cookie message?
 
-FIXME: Angular: when you switch the theme CSS over using the buttons, the ng-view content disappears. Not good!
-
-FIXME: Gulpfile seems to have caught up with the themes so now clicking theme2 does load the new theme colours. However, still weird behaviour going on
-
 TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons

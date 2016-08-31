@@ -154,3 +154,52 @@ Font icon stuff
 .icon-stackexchange:before { content: '\f18d'; } 
 .icon-slack:before { content: '\f198'; } 
 .icon-jsfiddle:before { content: '\f1cc'; } 
+
+
+/* ===============
+Backup colours
+================== */
+
+a,
+.content-links li a,
+footer ul li a,
+.theme-links li a {
+    color: $brand-link-color;
+}
+
+a:hover,
+a:focus,
+a:active,  
+.content-links li a:hover,
+.content-links li a:focus, 
+.content-links li a:active,
+footer ul li a:hover,   
+footer ul li a:focus,  
+footer ul li a:active,
+.theme-links li a:hover,
+.theme-links li a:focus,
+.theme-links li a:active {
+    color: $brand-link-hover;  
+}
+
+.content-links li {
+    background-color: $brand-link-color;
+	@include transition(background-color .25s ease-in);  
+}
+
+.content-links li:hover,
+.content-links li:focus,
+.content-links li:active {
+	background-color: $brand-link-hover;
+}
+
+.content-links li a {
+	color: lighten($brand-link-hover, 30%);
+	@include transition(color .25s ease-in);
+}
+
+.content-links li:hover a,
+.content-links li:focus a,
+.content-links li:active a { 
+	color: $base-white;
+}

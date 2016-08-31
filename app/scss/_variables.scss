@@ -15,8 +15,8 @@ $spacing-four: 			$spacing-base * 4;
 /* These colours are only a 'backup' option, mostly useful when developing. The dynamically loaded theme css should override any colour options */
 $base-white: 			#fff;
 $base-black: 			#000; 
-$brand-link-color:  #2a2a2a;
-$brand-link-hover:  #666;
+$brand-link-color:  #aaa;
+$brand-link-hover:  #a3a3a3;
 
 
 @mixin transition($args...) {
