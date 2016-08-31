@@ -64,6 +64,8 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
         $cookies.put('themeChoice', themeURL, {'path': '/'});
         $scope.checkThemeSettings();
     }
+    
+
 
 }]);
   
@@ -79,6 +81,6 @@ TODO: Refactor / refine the 'base' colours of the styling: rather than just bein
 
 TODO: creative colours for various themes (leave this til last)
 
-TODO: fix the fontello icons so that the theme buttons are circles, not cogs
+TODO: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle)
 
 */ 

@@ -24,9 +24,9 @@
 	<header>
 		<nav class='nav-themes'>
 			<ul class='theme-links'>
-				<li ng-repeat='theme in themes'><a class='icon-cog' href='' ng-click='switchTheme(theme.url)'>{{ theme.name }}</a></li>  
+				<li ng-repeat='theme in themes'><a ng-class="{'icon-circle':!toggled, 'icon-dot-circled':toggled}" href='' ng-click='toggled = !toggled; switchTheme(theme.url)'>{{ theme.name }}</a></li>  
 			</ul>
-		</nav>   
+		</nav>     
 		 
 		<div ng-show='isAcknowledgementCookieUndefined()' ng-controller='cookieCtrl' class='cookie-message'>
 			<p>This site utilises cookies in order to work correctly. <a ng-click='userAcknowledgesCookies()' href=''>That's fine.</a></p>

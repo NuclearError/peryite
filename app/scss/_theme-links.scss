@@ -24,8 +24,13 @@
 	font-family: 'peryite';
     font-size: $font-size-base + ($font-size-base / 2);
     margin-left: $font-size-base;
+    @extend .icon-circle;
 }
 
 .theme-links li:first-child a:before {
     margin-left: 0;
+}
+
+.theme-links li a.active:before {
+	 @extend .icon-dot-circled;
 }
