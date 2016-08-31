@@ -28,8 +28,8 @@
 			</ul>
 		</nav>   
 		 
-		<div ng-show='checkCookieMessageVisibility()' ng-controller='cookieCtrl' class='cookie-message'>
-			<p>This site utilises cookies in order to work correctly. <a ng-click='acknowledgeCookies()' href='#'>That's fine.</a></p>
+		<div ng-show='isAcknowledgementCookieUndefined()' ng-controller='cookieCtrl' class='cookie-message'>
+			<p>This site utilises cookies in order to work correctly. <a ng-click='userAcknowledgesCookies()' href=''>That's fine.</a></p>
 		</div>
 		
 		<nav class='nav-content'>

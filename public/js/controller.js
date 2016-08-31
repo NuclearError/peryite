@@ -14,33 +14,28 @@ app.config(function($routeProvider) {
 	}) 
 	.otherwise({
 		// redirect to homepage 
-		redirectTo: '/' 
+		redirectTo: '/'   
 	})
 });    
 
 app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
-  // Retrieving a cookie
-  var cookieMessage = $cookies.get('cookieAcknowledgement');
-  
-  console.log('cookieCtrl says that cookieMessage = ' + cookieMessage);
-  
-      $scope.checkCookieMessageVisibility = function() {  
-        if(cookieMessage != 0 && cookieMessage != undefined){
-          	return false; // hide message
-        } else {
-          	return true; // show message
-        }
+  $scope.isAcknowledgementCookieUndefined = function() {
+    var newCookieCheck = $cookies.get('cookieAcknowledgement');
+    if(newCookieCheck == undefined) {
+      return true;
+    } else {
+      return false;
     }
+  }
     
-  $scope.checkCookieMessageVisibility();
+  $scope.isAcknowledgementCookieUndefined(); 
     
-  $scope.acknowledgeCookies = function() {
-    if(cookieMessage == 0 || cookieMessage == undefined) {
-  		$cookies.put('cookieAcknowledgement', 'Acknowledged', {'path': '/'});
-  		console.log('cookie message should now hide itself at this point.');
+  $scope.userAcknowledgesCookies = function() {
+  	if ($scope.isAcknowledgementCookieUndefined()){
+  	  $cookies.put('cookieAcknowledgement', 'Acknowledged', {'path': '/'});
   	}
-  	$scope.checkCookieMessageVisibility();
+  	$scope.isAcknowledgementCookieUndefined();
   }
   
 }]);
@@ -63,8 +58,6 @@ app.controller('themeCtrl', ['$scope', function($scope) {
   
 /*
 
-FIXME: Cookie code works but you only see the positive view results when you refresh the page. Why is it not dynamically showing/hiding the cookie message?
-
 TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
@@ -72,5 +65,7 @@ TODO: basic social media metadata - twitter etc, og image/data, use realfavicong
 TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the bee game) with the overall website 
 
 TODO: Refactor the config ng-route stuff to be more like the angular-seed example
+
+TODO: Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 
 */ 
