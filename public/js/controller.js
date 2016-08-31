@@ -39,7 +39,7 @@ app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   }
   
 }]);
-
+  
 app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
     
     // Set the theme, retaining any previous user choices 
@@ -56,6 +56,7 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
     
     $scope.themes = [
         { name: 'theme1', url: 'theme1' }, 
+        { name: 'theme2', url: 'theme2' }, 
         { name: 'green', url: 'green' } 
     ];
     
