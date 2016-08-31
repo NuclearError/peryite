@@ -56,7 +56,7 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
     
     $scope.themes = [
         { name: 'theme1', url: 'theme1' }, 
-        { name: 'theme2', url: 'theme2' } 
+        { name: 'green', url: 'green' } 
     ];
     
     $scope.switchTheme = function(themeURL) {
@@ -81,6 +81,6 @@ TODO: Refactor / refine the 'base' colours of the styling: rather than just bein
 
 TODO: creative colours for various themes (leave this til last)
 
-TODO: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle)
+TODO: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle) (Angular ng-class)
 
 */ 

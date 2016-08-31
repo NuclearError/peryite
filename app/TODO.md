@@ -6,4 +6,4 @@
 | controller.js | 78 | Refactor the config ng-route stuff to be more like the angular-seed example
 | controller.js | 80 | Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 | controller.js | 82 | creative colours for various themes (leave this til last)
-| controller.js | 84 | Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle)
+| controller.js | 84 | Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle) (Angular ng-class)
