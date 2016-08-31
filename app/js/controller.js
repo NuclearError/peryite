@@ -40,25 +40,34 @@ app.controller('cookieCtrl', ['$scope', '$cookies', function($scope, $cookies) {
   
 }]);
 
-app.controller('themeCtrl', ['$scope', function($scope) {
+app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
     
-    // set default
-    $scope.css = 'theme1';  
+    // Set the theme, retaining any previous user choices 
+    $scope.checkThemeSettings = function() {
+      var themeCookie = $cookies.get('themeChoice');
+      if(themeCookie == undefined) {
+        $scope.css = 'theme1';  
+      } else {
+        $scope.css = themeCookie;  
+      }
+    }
+    
+    $scope.checkThemeSettings();
     
     $scope.themes = [
-        { name: 'theme1', url: 'theme1' } , 
+        { name: 'theme1', url: 'theme1' }, 
         { name: 'theme2', url: 'theme2' } 
     ];
     
     $scope.switchTheme = function(themeURL) {
         $scope.css = themeURL;   
+        $cookies.put('themeChoice', themeURL, {'path': '/'});
+        $scope.checkThemeSettings();
     }
 
 }]);
   
 /*
-
-TODO: Angular: implement cookie that remembers which css theme is in use
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
@@ -67,5 +76,7 @@ TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the 
 TODO: Refactor the config ng-route stuff to be more like the angular-seed example
 
 TODO: Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
+
+TODO: creative colours for various themes (leave this til last)
 
 */ 
