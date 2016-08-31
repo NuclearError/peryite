@@ -1,46 +1,102 @@
 
 /* GREEN */  
 
-a,
-.content-links li a,
-footer ul li a,
-.theme-links li a {
-    color: $brand-link-color;
+html, body {
+	background-color: lighten($base-beige, 20%);
+	color: darken($base-russet, 5%);
+	font-family: $font-family-sans-serif;
 }
 
-a:hover,
-a:focus,
-a:active,    
-.content-links li a:hover,
-.content-links li a:focus, 
-.content-links li a:active,
-footer ul li a:hover,     
-footer ul li a:focus,  
-footer ul li a:active,
-.theme-links li a:hover,
-.theme-links li a:focus,
-.theme-links li a:active {
-    color: $brand-link-hover;  
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-family-serif;
 }
 
-.content-links li {
-    background-color: $brand-link-color;
-	@include transition(background-color .25s ease-in);  
+h1, h2 {
+	font-size: $font-size-heading;
+	margin: $spacing-two 0;
 }
 
-.content-links li:hover,
-.content-links li:focus,
-.content-links li:active {
-	background-color: $brand-link-hover;
+h3, h4, h5, h6, p {
+	line-height: 22px;
+	margin: $spacing-two 0;
+}
+
+.wrapper {
+	//background-color: lighten($base-beige, 10%);
+}
+
+.cookie-message a { color: $base-olive; }
+
+.nav-themes {
+	border-radius: 0 0 $spacing-base $spacing-base;
+	-webkit-border-radius: 0 0 $spacing-base $spacing-base;
+	-moz-border-radius: 0 0 $spacing-base $spacing-base;
+	-ms-border-radius: 0 0 $spacing-base $spacing-base;
+	-o-border-radius: 0 0 $spacing-base $spacing-base;
+	background-color: lighten($base-beige, 10%);
+	padding-bottom: $spacing-base + ($spacing-base / 2);
+	border-bottom: 4px double darken($base-beige, 20%);
+	border-left: 4px double darken($base-beige, 20%);
+	border-right: 4px double darken($base-beige, 20%);
+}
+
+.nav-content {
+	padding: $spacing-two 0 0;
+}
+
+.content-container {
+	margin: 0;
+	border-top: 4px double darken($base-beige, 20%);
+	border-bottom: 4px double darken($base-beige, 20%);
+	background-color: lighten($base-beige, 10%);
+	@include border-radius(7px);
 }
 
 .content-links li a {
-	color: lighten($brand-link-hover, 30%);
+	color: $base-olive;  
 	@include transition(color .25s ease-in);
 }
 
 .content-links li:hover a,
 .content-links li:focus a,
 .content-links li:active a { 
-	color: $base-white;
+	color: $brand-link-hover;
+	text-decoration: underline;
 }
+
+footer {
+	margin: 0;
+	border-top: none;
+	background-color: lighten($base-beige, 20%);
+}
+
+footer ul li a {
+	color: $base-olive;
+}
+
+a {
+    color: $brand-link-color;
+}
+ 
+a:hover,
+a:focus,
+a:active,    
+footer ul li a:hover,     
+footer ul li a:focus,  
+footer ul li a:active,
+.theme-links li a:hover,
+.theme-links li a:focus,
+.theme-links li a:active {
+    color: $brand-link-hover;    
+}
+
+.content-links li {
+    background-color: transparent;
+}
+
+.content-links li:hover,
+.content-links li:focus,
+.content-links li:active {
+	background-color: transparent;
+}
+

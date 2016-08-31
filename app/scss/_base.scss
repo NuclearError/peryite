@@ -91,6 +91,10 @@ Smaller Devices
 		width: 90%;
 	}
 	
+	.social-links li {
+		margin-bottom: $spacing-base + ($spacing-base / 2);
+	}
+	
 }
 
 @media (max-width: $mobile-breakpoint) { 

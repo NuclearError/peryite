@@ -1,7 +1,9 @@
 
 /* GREEN */
 
-$font-family-sans-serif:  	sans-serif;
+$font-family-sans-serif:  	Gill Sans, Gill Sans MT, Calibri, sans-serif;
+$font-family-serif:         'Goudy Old Style', 'Garamond', 'Big Caslon', Times New Roman, serif;
+
 $font-size-base: 			      16px; 					        /* rough equivalent of 12pt */
 $font-size-heading:			    $font-size-base * 2; 	  /* rough equivalent of 24pt */
 
@@ -14,8 +16,13 @@ $base-green:      #758918;
 $base-brown:      #564334;
 $base-russet:     #49281F;
 
-$brand-link-color:  blue;
-$brand-link-hover:  purple;  
+$brand-link-color:  darken($base-beige, 20%);
+$brand-link-hover:  darken($base-beige, 35%);  
+
+$spacing-base: 			10px;
+$spacing-two: 			$spacing-base * 2;
+$spacing-three: 		$spacing-base * 3;
+$spacing-four: 			$spacing-base * 4;
     
 
 @mixin transition($args...) {

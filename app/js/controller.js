@@ -78,6 +78,8 @@ TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the 
 
 TODO: Refactor the config ng-route stuff to be more like the angular-seed example
 
+TODO: Refactor navigation links to use ng-repeat instead of being manual (if possible)
+
 TODO: Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 
 TODO: creative colours for various themes (leave this til last)
