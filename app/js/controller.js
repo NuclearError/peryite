@@ -79,4 +79,6 @@ TODO: Refactor / refine the 'base' colours of the styling: rather than just bein
 
 TODO: creative colours for various themes (leave this til last)
 
+TODO: fix the fontello icons so that the theme buttons are circles, not cogs
+
 */ 

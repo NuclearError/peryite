@@ -6,3 +6,4 @@
 | controller.js | 76 | Refactor the config ng-route stuff to be more like the angular-seed example
 | controller.js | 78 | Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 | controller.js | 80 | creative colours for various themes (leave this til last)
+| controller.js | 82 | fix the fontello icons so that the theme buttons are circles, not cogs
