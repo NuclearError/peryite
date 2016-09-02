@@ -5,6 +5,7 @@ var app = angular.module('mainApp', ['ngRoute', 'ngCookies']);
 // not written for compression
  
 app.config(function($routeProvider) {
+  
 	$routeProvider
 	.when('/', {
 		templateUrl: 'home.html'
@@ -69,8 +70,18 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
 
 
 }]);
+
+app.controller('gameCtrl', ['$scope', function($scope) {
+    
+    console.log('Game Controller says hello.');
+
+}]);
   
 /*
+
+FIXME: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle) (Angular ng-class)
+
+TODO: Refactor navigation links to use ng-repeat instead of being manual (if possible)
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
 
@@ -78,12 +89,12 @@ TODO: Angular : figure out how to integrate standalone cool stuff (eg. like the 
 
 TODO: Refactor the config ng-route stuff to be more like the angular-seed example
 
-TODO: Refactor navigation links to use ng-repeat instead of being manual (if possible)
-
 TODO: Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 
-TODO: creative colours for various themes (leave this til last)
+TODO: implement colour designs from Carly (yay!)
 
-TODO: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle) (Angular ng-class)
+TODO: showcase: use of ReactJS, phaser game, clever API calls, use of JS unit testing if possible?
+
+
 
 */ 

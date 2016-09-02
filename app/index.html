@@ -5,7 +5,15 @@
         <title>Angela Cullen | Web Developer</title>  
         
         <!-- metadata, social media / OG data, favicons etc to go here -->
-        
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=latest">
+		<link rel="icon" type="image/png" href="/icons/favicon-32x32.png?v=latest" sizes="32x32">
+		<link rel="icon" type="image/png" href="/icons/favicon-16x16.png?v=latest" sizes="16x16">
+		<link rel="manifest" href="/icons/manifest.json?v=latest">
+		<link rel="mask-icon" href="/icons/safari-pinned-tab.svg?v=latest" color="#000000">
+		<link rel="shortcut icon" href="/icons/favicon.ico?v=latest">
+		<meta name="theme-color" content="#ffffff">  
+
         <link rel='stylesheet' type='text/css' href='css/styles.min.css' />
         
         <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js'></script>
@@ -26,7 +34,7 @@
 			<ul class='theme-links'>
 				<li ng-repeat='theme in themes'><a ng-class="{'icon-circle':!toggled, 'icon-dot-circled':toggled}" href='' ng-click='toggled = !toggled; switchTheme(theme.url)'>{{ theme.name }}</a></li>  
 			</ul>
-		</nav>       
+		</nav>        
 		 
 		<div ng-show='isAcknowledgementCookieUndefined()' ng-controller='cookieCtrl' class='cookie-message'>
 			<p>This site utilises cookies in order to work correctly. <a ng-click='userAcknowledgesCookies()' href=''>That's fine.</a></p>
@@ -44,22 +52,24 @@
 	<section class='content-container' ng-view>
 	</section> 
 	
-	<footer>
+	<footer>  
 		<ul class='social-links'>
 			<li>
-				<a class='icon-linkedin' target='_blank' href=''>LinkedIn</a>
+				<a class='icon-linkedin' target='_blank' href='https://uk.linkedin.com/in/angelacullen1'>LinkedIn</a>
 			</li>
 			<li>
-				<a class='icon-twitter' target='_blank' href=''>Twitter</a>
+				<a class='icon-twitter' target='_blank' href='https://twitter.com/FlintlockMedia'>Twitter</a>
 			</li>
 			<li>
-				<a class='icon-bitbucket' target='_blank' href=''>Bitbucket</a>
+				<a class='icon-bitbucket' target='_blank' href='https://bitbucket.org/Candlejack/profile/repositories?visibility=public'>Bitbucket</a>
 			</li>
+			<!--
 			<li>
 				<a class='icon-github' target='_blank' href=''>Github</a>
 			</li>
+			-->
 			<li>
-				<a class='icon-jsfiddle' target='_blank' href=''>JSFiddle</a>
+				<a class='icon-jsfiddle' target='_blank' href='https://jsfiddle.net/user/angelacullen/fiddles/'>JSFiddle</a>
 			</li>
 		</ul>
 	</footer>
