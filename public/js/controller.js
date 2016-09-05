@@ -1,9 +1,9 @@
 console.log('Hello from controller.js');
   
-var app = angular.module('mainApp', ['ngRoute', 'ngCookies']);  
+var app = angular.module('mainApp', ['ngRoute', 'ngCookies', 'ngLoadScript']);  
 
 // not written for compression
- 
+   
 app.config(function($routeProvider) {
   
 	$routeProvider

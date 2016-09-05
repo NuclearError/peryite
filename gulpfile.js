@@ -58,6 +58,9 @@ gulp.task('copyImages', function() {
 gulp.task('copyIndex', function() {
     gulp.src('app/*.html')
     .pipe(gulp.dest('public/'));  
+    
+    gulp.src(['app/projects/**/*'])
+    .pipe(gulp.dest('public/projects'));
 });
 
 // Watch files for changes
@@ -67,7 +70,8 @@ gulp.task('watchFiles', function() {
   gulp.watch('app/themes/*/*.scss', ['compileThemes']);
   gulp.watch('app/img/*.*', ['copyImages']);
   gulp.watch('app/*.html', ['copyIndex']);
+  gulp.watch('app/projects/**/*', ['copyIndex'])
 });
 
-// Gulp Tasks
+// Gulp Tasks  
 gulp.task('default', ['tidyJS', 'compileCSS', 'compileThemes', 'generateToDoList', 'copyImages', 'copyIndex', 'watchFiles']);

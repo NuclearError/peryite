@@ -12,11 +12,11 @@ Azura.Preload = {
     this.load.setPreloadSprite(this.preloadBar);
 
     //load game assets    
-    this.load.image('generic_wilderness', 'assets/images/town.png');  
-    this.load.spritesheet('player', 'assets/images/char.png', 24, 32);
+    this.load.image('generic_wilderness', 'projects/phaser/assets/images/town.png');  
+    this.load.spritesheet('player', 'projects/phaser/assets/images/char.png', 24, 32);
 
     //load game data
-    this.load.tilemap('genericMap', 'assets/maps/Basic_Map.json', null, Phaser.Tilemap.TILED_JSON);
+    this.load.tilemap('genericMap', 'projects/phaser/assets/maps/Basic_Map.json', null, Phaser.Tilemap.TILED_JSON);
   },
   create: function() {
   	this.game.stage.backgroundColor = '#FFCCE7';

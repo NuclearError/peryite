@@ -9,4 +9,4 @@ Azura.game.state.add('Preload', Azura.Preload);
 Azura.game.state.add('Home', Azura.Home); 
 Azura.game.state.add('Game', Azura.Game);
 
-Azura.game.state.start('Boot'); 
+Azura.game.state.start('Boot');   

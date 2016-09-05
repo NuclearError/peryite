@@ -15,10 +15,10 @@ Azura.Boot = {
     //physics system
     this.game.physics.startSystem(Phaser.Physics.ARCADE);    
   },
-  preload: function() {
+  preload: function() {  
     //assets required by the loading screen
-    this.load.image('loadingBar', 'assets/images/loadbar.png');
-    this.load.image('logo', 'assets/images/logo.png');
+    this.load.image('loadingBar', 'projects/phaser/assets/images/loadbar.png');
+    this.load.image('logo', 'projects/phaser/assets/images/logo.png');
   },
   create: function() {
     this.state.start('Preload');
