@@ -10,8 +10,8 @@ app.config(function($routeProvider) {
 	.when('/', {
 		templateUrl: 'home.html'
 	})
-	.when('/game', {
-		templateUrl: 'game.html'
+	.when('/phaser', {
+		templateUrl: 'phaser.html'
 	}) 
 	.otherwise({
 		// redirect to homepage 
@@ -71,15 +71,19 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
 
 }]);
 
+/*
 app.controller('gameCtrl', ['$scope', function($scope) {
     
     console.log('Game Controller says hello.');
 
 }]);
+*/
   
 /*
 
 FIXME: Make it so that when you have a chosen theme, the icon is a circle with a dot (or an empty circle) (Angular ng-class)
+
+FIXME: Update the head links so that the favicon works correctly (use c9.io source as a reference if needed)
 
 TODO: Refactor navigation links to use ng-repeat instead of being manual (if possible)
 
