@@ -85,6 +85,8 @@ FIXME: Make it so that when you have a chosen theme, the icon is a circle with a
 
 FIXME: Update the head links so that the favicon works correctly (use c9.io source as a reference if needed)
 
+FIXME: Investigate the lazy-loading issue with the Phaser JS files and the game's preloading process. Ideally Phaser shouldn't even boot until the JS files are lazy-loaded fully.
+
 TODO: Refactor navigation links to use ng-repeat instead of being manual (if possible)
 
 TODO: basic social media metadata - twitter etc, og image/data, use realfavicongenerator for icons
@@ -95,7 +97,7 @@ TODO: Refactor the config ng-route stuff to be more like the angular-seed exampl
 
 TODO: Refactor / refine the 'base' colours of the styling: rather than just being a bit grey, load a backup stylesheet so that before a cookie is set and a stylesheet is loaded, there isn't a weird flickering
 
-TODO: implement colour designs from Carly (yay!)
+TODO: implement colour designs from Carly (yay!) 
 
 TODO: showcase: use of ReactJS, phaser game, clever API calls, use of JS unit testing if possible?
 
