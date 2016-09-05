@@ -10,8 +10,8 @@ app.config(function($routeProvider) {
 	.when('/', {
 		templateUrl: 'home.html'
 	})
-	.when('/game', {
-		templateUrl: 'game.html'
+	.when('/phaser', {
+		templateUrl: 'phaser.html'
 	}) 
 	.otherwise({
 		// redirect to homepage 
@@ -71,11 +71,13 @@ app.controller('themeCtrl', ['$scope', '$cookies', function($scope, $cookies) {
 
 }]);
 
+/*
 app.controller('gameCtrl', ['$scope', function($scope) {
     
     console.log('Game Controller says hello.');
 
 }]);
+*/
   
 /*
 
